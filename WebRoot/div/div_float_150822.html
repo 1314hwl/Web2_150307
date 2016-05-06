@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>div float(漂浮学习)</title>
+<style>
+div {
+	
+}
+
+#header {
+	width: 100%;
+	height: 200px;
+	background: graytext;
+}
+
+#body {
+	width: 100%;
+	height: 200px;
+	background: captiontext;
+}
+
+#fooder {
+	width: 100%;
+	height: 200px;
+	background: windowframe;
+}
+
+.left_c {
+	width: 20%;
+	height: 20%;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	background: red;
+	float: left;
+}
+
+#center {
+	width: 20%;
+	height: 20%;
+	background: fuchsia;
+	float: left;
+}
+
+.right_c {
+	width: 20%;
+	height: 20%;
+	background: yellow;
+	float: left;
+}
+
+.one_c {
+	width: 40%;
+	height: 20%;
+	background: lime;
+	float: left;
+}
+
+.two_c {
+	width: 40%;
+	height: 20%;
+	background: maroon;
+	float: left;
+}
+
+.three_c {
+	width: 80%;
+	height: 20%;
+	background: navy;
+	float: left;
+}
+
+.four_c {
+	width: 50%;
+	height: 20%;
+	background: olive;
+	float: left;
+}
+/**
+---------------------------------------------------------------------------------------------------------body
+**/
+.body_left_c {
+	width: 20%;
+	height: 20%;
+	background: red;
+	float: right;
+}
+
+#body_center {
+	width: 20%;
+	height: 20%;
+	background: fuchsia;
+	float: right;
+}
+
+.body_right_c {
+	width: 20%;
+	height: 20%;
+	background: yellow;
+	float: right;
+}
+
+.body_one_c {
+	width: 40%;
+	height: 20%;
+	background: lime;
+	float: right;
+}
+
+.body_two_c {
+	width: 40%;
+	height: 20%;
+	background: maroon;
+	float: right;
+}
+
+.body_three_c {
+	width: 80%;
+	height: 20%;
+	background: navy;
+	float: right;
+}
+
+.body_four_c {
+	width: 50%;
+	height: 20%;
+	background: olive;
+	float: right;
+}
+/**
+------------------------------------------------------------------------------------------------------fooder
+**/
+.fooder_left_c {
+	width: 20%;
+	height: 20%;
+	background: red;
+	float: left;
+}
+
+#fooder_center {
+	width: 20%;
+	height: 20%;
+	background: fuchsia;
+	float: left;
+}
+
+.fooder_right_c {
+	width: 20%;
+	height: 20%;
+	background: yellow;
+	float: right;
+}
+
+.fooder_one_c {
+	width: 50%;
+	height: 20%;
+	background: lime;
+	float: right;
+}
+
+.fooder_two_c {
+	width: 40%;
+	height: 30%;
+	background: maroon;
+	float: left;
+}
+
+.fooder_three_c {
+	width: 80%;
+	height: 20%;
+	background: navy;
+	float: right;
+}
+
+.fooder_four_c {
+	width: 100%;
+	height: 80%;
+	background: olive;
+}
+
+.bottom_c {
+	width: 1500px;
+	height: 300px;
+	background: olive;
+}
+</style>
+</head>
+<body>
+	<div id="header">
+		<div id="left" class="left_c"></div>
+		<div id="center" class="center_c"></div>
+		<div id="right" class="right_c"></div>
+		<div id="one" class="one_c"></div>
+		<div id="two" class="two_c"></div>
+		<div id="three" class="three_c"></div>
+		<div id="four" class="four_c"></div>
+	</div>
+	<div id="body">
+		<div id="body_left" class="body_left_c"></div>
+		<div id="body_center" class="body_center_c"></div>
+		<div id="body_right" class="body_right_c"></div>
+		<div id="body_one" class="body_one_c"></div>
+		<div id="body_two" class="body_two_c"></div>
+		<div id="body_three" class="body_three_c"></div>
+		<div id="body_four" class="body_four_c"></div>
+	</div>
+	<div id="fooder">
+		<div id="fooder_left" class="fooder_left_c"></div>
+		<div id="fooder_center" class="fooder_center_c"></div>
+		<div id="fooder_right" class="fooder_right_c"></div>
+		<div id="fooder_one" class="fooder_one_c"></div>
+		<div id="fooder_two" class="fooder_two_c"></div>
+		<div id="fooder_three" class="fooder_three_c"></div>
+		<div id="fooder_four" class="fooder_four_c"></div>
+	</div>
+	<div id="bottom">
+		<div id="bottom" class="bottom_c">
+			<p>div的float属性是漂浮的意思,总结一下几点:</p>
+			<p>1:float:left属性,如果三个div都用float:left那个这三个div就会从左到右一个挨着一个显示,如果宽度显示不下就会自动换行,接着从左到右一个挨着一个显示</p>
+			<p>2:float:right属性和left属性相反</p>
+			<p>3:float:如果下一个div没有使用漂浮,该div会显示在所有漂浮属性div的底层</p>
+			<p>4:margin:10px,20px,30px,24px margin:默认的是上右下左</p>
+		</div>
+	</div>
+</body>
+</html>

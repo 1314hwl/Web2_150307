@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jquery3.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<script type="text/javascript" src="jquery-1.11.2.js"></script>
+</head>
+
+<body>
+
+	<a id="hello">clickme</a>
+	<script type="text/javascript">
+		$("#hello").css("color", "red");
+		$("#hello").css("color", "#0ffff0");
+		alert($("#hello")[0]);
+		alert($("#hello").get(0));
+		alert($("#hello").length);
+	</script>
+
+
+</body>
+</html>

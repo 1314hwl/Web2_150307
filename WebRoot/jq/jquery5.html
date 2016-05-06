@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jquery5.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<script type="text/javascript" src="jquery-1.11.2.js"></script>
+
+
+<script type="text/javascript">
+	window.onload = function() {
+		var btn = document.getElementById("myButton");
+		btn.onclick = function() {
+			var count = 0;
+			var checkBoxs = document.getElementsByName("myCheck");
+			for ( var i = 0; i < checkBoxs.length; i++) {
+				if (checkBoxs[i].checked) {
+					count++;
+				}
+			}
+			alert("number:" + count);
+		};
+	};
+</script>
+
+
+
+</head>
+
+<body>
+	<input type="checkbox" name="myCheck">
+	<input type="checkbox" name="myCheck">
+	<input type="checkbox" name="myCheck">
+	<input type="checkbox" name="myCheck">
+	<input type="checkbox" name="myCheck">
+	<br>
+	<br>
+	<br>
+	<br>
+	<input type="button" value="click me" id="myButton">
+</body>
+</html>

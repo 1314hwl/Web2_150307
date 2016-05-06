@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jquery7.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="jquery-1.11.2.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#btn1").click(function() {
+			$("#one").css("background","blue");
+		});
+		$("#btn2").click(function() {
+			$(".mini").css("background","green");
+		});
+		$("#btn3").click(function() {
+			$("div").css("background","orange");
+		});
+		$("#btn4").click(function() {
+			$("*").css("background","gray");
+		});
+		$("#btn5").click(function() {
+			$("span,.mini").css("background","white");
+		});
+	});
+</script>
+
+</head>
+<h3>基本选择器.</h3>
+<input type="button" value="test1" id="btn1">
+<input type="button" value="test2" id="btn2">
+<input type="button" value="test3" id="btn3">
+<input type="button" value="test4" id="btn4">
+<input type="button" value="test5" id="btn5">
+
+<div class="one" id="one">
+	id 为 one,class 为one的div
+	<div class="mini">class 为mini</div>
+</div>
+<div class="one" id="two" title="test">
+	id=two,class=one,title=test的div
+	<div class="mini" title="other">class=mini,title=other的div</div>
+	<div class="mini" title="test">class=mini,title=test的div</div>
+</div>
+
+<div class="one">
+	<div class="mini">class=mini的div</div>
+	<div class="mini">class=mini的div</div>
+	<div class="mini">class=mini的div</div>
+	<div class="mini"></div>
+</div>
+<div class="one">
+	<div class="mini">class=mini的div</div>
+	<div class="mini">class=mini的div</div>
+	<div class="mini">class=mini的div</div>
+	<div class="mini" title="tesst">class=mini,title为tesst</div>
+</div>
+
+<div style="display:none;" class="none">style的display为"none"的div</div>
+<div class="hide">class为hide的div</div>
+<div>
+	包含input的type为hidden的div<input type="hidden" size="8"></input>
+</div>
+<body>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js1.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+</head>
+
+<body>
+
+	<script type="text/javascript">
+		document.write("Hello World Java Script <br>")
+
+		var globe = "java script globe"//全局变量
+
+		function test() {
+			//var i = 3;
+			//alert(i);
+
+			var local = "java script local";
+			document.write("222" + globe + "<br>");
+			document.write("222" + local);
+		}
+		document.write("111" + globe);
+		document.write("111" + local);
+	</script>
+	<br>
+	<a href="#" onclick="alert('Hello World show!')">点击我</a>
+	<br>
+	<input type="button" value="click me over" onclick=test();>
+</body>
+</html>

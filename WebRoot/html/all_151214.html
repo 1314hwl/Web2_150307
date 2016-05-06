@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="1.css">
+<title>html 综合使用测试</title>
+<style>
+#container {
+	width: 1080px;
+	background: white;
+}
+
+#header_div {
+	height: 500px;
+	border: 5px;
+	border-color: yellow;
+	border-style: groove;
+	padding: 15px;
+	text-indent: em;
+	text-align: left;
+	text-decoration: underline;
+	text-shadow: blue;
+	text-transform: uppercase;
+	color: white;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: bold;
+	font-family: cursive;
+	background-position: center;
+	background-attachment: scroll;
+	background-repeat: repeat;
+	background-color: navy;
+	background-image: url("memory.jpg");
+	background-position: center;
+}
+
+#main_div {
+	height: 500px;
+	background: blue;
+	border-width: 5px;
+	border-style: solid;
+	border-color: teal;
+}
+
+#main_l_silder {
+	width: 740px;
+	float: left;
+	height: 500px;
+	background: red;
+	float: left;
+}
+
+.left_class_1 {
+	width: 360px;
+	float: left;
+	height: 240px;
+	background: navy;
+	color: white;
+	padding: 5px;
+}
+
+.left_class_2 {
+	width: 350px;
+	float: left;
+	height: 230px;
+	background: purple;
+	margin: 5px;
+	color: white;
+	padding: 5px;
+}
+
+.left_class_3 {
+	width: 350px;
+	float: left;
+	height: 230px;
+	background: maroon;
+	border-width: 5px;
+	border-style: solid;
+	border-color: highlight;
+	color: white;
+	padding: 5px;
+}
+
+.left_class_4 {
+	width: 360px;
+	float: left;
+	height: 240px;
+	background: lime;
+	color: white;
+	padding: 5px
+}
+
+#main_r_silder {
+	width: 330px;
+	height: 500px;
+	background: fuchsia;
+	float: left;
+}
+
+#footer_div {
+	height: 500px;
+	background-position: center;
+	background-attachment: scroll;
+	background-repeat: repeat;
+	background-color: navy;
+	background-image: url("memory1.jpg");
+	border: 5px;
+	border-style: dotted;
+	border-color: fuchsia;
+}
+</style>
+</head>
+<body>
+	<div id="container">
+		<div id="header_div">
+			1>段落的设置<br> 2>文字的设置<br> 3>背景的控制<br>4>sdfasdfsdfsf<br>
+		</div>
+		<div id="main_div">
+			<div id="main_l_silder">
+				<div id="left_1" class="left_class_1">
+					盒子模型padding属性特性:<br>
+					1.当设置了padding属性时,原来div的宽高就会分别增加padding*2尺寸,left_class_1这个div宽度由原来的370px应修改成了360px,高度应由原来的250px修改成240px。<br>
+					2.当设置了padding属性时,内容和盒子的间距为padding的值.
+				</div>
+				<div id="left_2" class="left_class_2">
+					盒子模型margin属性特性:<br>
+					1.当设置了margin属性时,原来div和外围div的间距为margin的值,left_class_2这个div宽度由原来的370px应修改成了360px,高度应由原来的250px修改成240px。<br>
+				</div>
+				<div id="left_3" class="left_class_3">
+					盒子模型border属性特性:<br>
+					1.当设置了border属性时,原来div的边线为border的值,left_class_3这个div宽度由原来的370px应修改成了360px,高度应由原来的250px修改成240px。<br>
+					2.盒子的border 3要素 宽度
+					(border-width),形状(border-style),颜色(border-color),三要素是一起出现的。
+				</div>
+				<div id="left_4" class="left_class_4">
+					盒子模型浮动特性:<br> div的float属性是漂浮的意思,总结一下几点:<br>
+					1:float:left属性,如果三个div都用float:left那个这三个div就会从左到右一个挨着一个显示,如果宽度显示不下就会自动换行,接着从左到右一个挨着一个显示<br>
+					2:float:right属性和left属性相反<br>
+					3:float:如果下一个div没有使用漂浮,该div会显示在所有漂浮属性div的底层<br>
+					4:margin:10px,20px,30px,24px margin:默认的是上右下左<br>
+				</div>
+			</div>
+			<div id="main_r_silder">
+				<div id="right_1"></div>
+				<div id="right_2"></div>
+				<div id="right_3"
+					style="background: black;color: white; width: 260px; height:490px;float: left; padding: 5px;">
+					CSS 的四种引入方式:<br> 1.直接在head 中写style引入css(本文件中头部style中div1)<br>
+					2.引入一个css文件(本文件中头部rel 1.css)<br> 3.直接在标签中写入style<br>
+					4.import导入进来,1.css 中 import 2.css<br> <br> CSS 常见的几种选择器:<br>
+					1.id选择器<br> 2.类选择器<br> 3.标签选择器<br> 4.通配选择器<br>
+				</div>
+			</div>
+		</div>
+		<div id="footer_div">
+			<div class="footer_1">
+				<h2>春</h2>
+				<p>盼望着，盼望着，东风来了，春天的脚步近了。
+					一切都像刚睡醒的样子，欣欣然张开了眼。山朗润起来了，水涨起来了，太阳的脸红起来了。
+					小草偷偷地从土里钻出来，嫩嫩的，绿绿的。园子里，田野里，瞧去，一大片一大片满是的。坐着，躺着，打两个滚，踢几脚球，赛几趟跑，捉几回迷藏。风轻悄悄的,草软绵绵的。
+					桃树、杏树、梨树，你不让我，我不让你，都开满了花赶趟儿。红的像火，粉的像霞，白的像雪。花里带着甜味儿；闭了眼，树上仿佛已经满是桃儿、杏儿、梨儿。花下成千成百的蜜蜂嗡嗡地闹着，大小的蝴蝶飞来飞去。野花遍地是：杂样儿，有名字的，没名字的，散在草丛里，像眼睛，像星星，还眨呀眨的。
+					“吹面不寒杨柳风”，不错的，像母亲的手抚摸着你。风里带来些新翻的泥土的气息，混着青草味儿，还有各种花的香，都在微微润湿的空气里酝酿。</p>
+
+			</div>
+			<div class="footer_2">
+				<hr>
+				(horizontal rule)
+				<pre>This text is preformatted</pre>
+
+				<em>This text is emphasized</em> <strong>This text is
+					strong</strong>
+				<code>This is some computer code</code>
+
+				<b>This text is bold</b> <i>This text is italic</i> <a
+					href="http://www.example.com/">This is a Link</a> <a
+					href="http://www.example.com/"><img src="URL"
+					alt="Alternate Text"> </a> <a href="mailto:webmaster@example.com">Send
+					e-mail</a>A named anchor: <a name="tips">Useful Tips Section</a> <a
+					href="#tips">Jump to the Useful Tips Section</a>
+			</div>
+			<div class="footer_3">
+				<ul>
+					<li>First item</li>
+					<li>Next item</li>
+				</ul>
+				<ol>
+					<li>First item</li>
+					<li>Next item</li>
+				</ol>
+				<dl>
+					<dt>First term</dt>
+					<dd>Definition</dd>
+					<dt>Next term</dt>
+					<dd>Definition</dd>
+				</dl>
+				<table border="1">
+					<tr>
+						<th>someheader</th>
+						<th>someheader</th>
+					</tr>
+					<tr>
+						<td>sometext</td>
+						<td>sometext</td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+
+	</div>
+</body>
+</html>

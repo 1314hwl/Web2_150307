@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jquery9.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="jquery-1.11.2.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		/**
+		 *1.(:first):选取第一个元素
+		 *return:单个元素
+		 *eg:$("div:first")选取所有<div>元素里的第一个<div>元素
+		 **/
+		$("#button1").click(function() {
+			$("div:first").css("background", "red");
+		});
+		/**
+		 *2.(:last):选取最后一个元素
+		 *return:单个元素
+		 *eg:$("div:last")选取所有<div>元素中最后一个<div>元素
+		 **/
+		$("#button2").click(function() {
+			$("div:last").css("background", "blue");
+		});
+		/**
+		 *3.$(":not(selector)"):去除所有与给定选择器匹配的元素
+		 *return:集合元素
+		 *eg:$("input:not(.myClass)")选取class不是myClass的<input>元素
+		 **/
+		$("#button3").click(function() {
+                $("div:not(.one)").css("background","#abc");
+		});
+		/**
+		 *4.$(":even"):选取索引是偶数的所有元素,索引从0开始
+		 *return:集合元素
+		 *eg:$("input:event")选取索引时偶数的<input>元素
+		 **/
+		$("#button4").click(function() {
+			$("div:even").css("background", "green");
+		});
+
+		/**
+		 *5.$(":odd"):选取索引是奇数的所有元素,索引从0开始
+		 *return:集合元素
+		 *eg:$("input:odd")选取索引时奇数的<input>元素
+		 **/
+		$("#button5").click(function() {
+			$("div:odd").css("background", "orange");
+		});
+		/**
+		 *6.$(":eq(index)"):选取索引等于index的元素(index从0开始)
+		 *return:集合元素
+		 *eg:$("input:eq(1)")选取索引等于1的<input>元素
+		 **/
+		$("#button6").click(function() {
+			$("div:eq(5)").css("background", "pink");
+		});
+		/**
+		 *6.$(":gt(index)"):选取索引大于index的元素(index从0开始)
+		 *return:集合元素
+		 *eg:$("input:gt(1)")选取索引大于1的<input>元素(>1)
+		 **/
+		$("#button7").click(function() {
+			$("div:gt(7)").css("background", "yellow");
+		});
+		/**
+		 *6.$(":lt(index)"):选取索引小于index的元素(index从0开始)
+		 *return:集合元素
+		 *eg:$("input:lt(1)")选取索引小于1的<input>元素(<1)
+		 **/
+		$("#button8").click(function() {
+			$("div:lt(4)").css("background", "black");
+		});
+	});
+</script>
+</head>
+<h3>基本过滤器.</h3>
+<input type="button" value="btn1" id="button1">
+<input type="button" value="btn2" id="button2">
+<input type="button" value="btn3" id="button3">
+<input type="button" value="btn4" id="button4">
+<input type="button" value="btn5" id="button5">
+<input type="button" value="btn6" id="button6">
+<input type="button" value="btn7" id="button7">
+<input type="button" value="btn8" id="button8">
+<body>
+	<div class="one" id="one">
+		id 为 one,class 为one的div
+		<div class="mini">class 为mini</div>
+	</div>
+	<div class="one" id="two" title="test">
+		id=two,class=one,title=test的div
+		<div class="mini" title="other">class=mini,title=other的div</div>
+		<div class="mini" title="test">class=mini,title=test的div</div>
+	</div>
+
+	<div class="one">
+		<div class="mini">class=mini的div</div>
+		<div class="mini">class=mini的div</div>
+		<div class="mini">class=mini的div</div>
+		<div class="mini"></div>
+	</div>
+	<div class="one">
+		<div class="mini">class=mini的div</div>
+		<div class="mini">class=mini的div</div>
+		<div class="mini">class=mini的div</div>
+		<div class="mini" title="tesst">class=mini,title为tesst</div>
+	</div>
+
+	<div style="display:none;" class="none">style的display为"none"的div</div>
+	<div class="hide">class为hide的div</div>
+	<div>
+		包含input的type为hidden的div<input type="hidden" size="8"></input>
+	</div>
+</body>
+</html>

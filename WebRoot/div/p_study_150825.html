@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>css 控制段落</title>
+<style>
+#p1 {
+	background-color: aqua;
+	text-indent: 50px;
+}
+
+#p2 {
+	background-color: buttonface;
+	text-indent: 50px;
+}
+
+#p3 {
+	text-align: right;
+	text-decoration: line-through;
+	text-decoration: overline;
+	text-decoration: underline;
+	letter-spacing: 5px;
+}
+
+#div1 {
+	color: fuchsia;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 40px;
+}
+
+#div2 {
+	line-height: 40px;
+}
+
+#div3 {
+	line-height: 90px;
+	font-size: 90px;
+	font-family: fantasy;
+}
+
+#div4 {
+	line-height: 40px;
+}
+
+#div5 {
+	width: 1200px;
+	height: 1200px;
+	/**
+	background: navy;
+	background-image: url(psu.jpg);
+	background-repeat: no-repeat;
+	border-width: 50px;
+	border-style: solid;
+	border-color: green;
+	background-position: -100px -200px;
+	border-color: green;
+	**/
+	background: fuchsia url(psu.jpg) no-repeat -100px -200px;
+	/**
+	注意:通过背景图片的位移来实现一张大图做多个背景
+	**/
+}
+
+body { /**
+	background: red;
+	background-image: url(psu.jpg);
+	background-repeat: repeat-x;
+	background-attachment: scroll;
+	background-position: bottom;
+**/
+	
+}
+</style>
+</head>
+<body>
+	<p id="p1">8月13日早上7点多，天津滨海新区，经过一夜大火，爆炸核心区内仍有几处明火未被扑灭，黑烟随风往西北方向飘散。距离核心区只有几百米的海关大楼天台上，一只鸽子迎着黑烟发出低沉的“咕咕”声，它也许来自爆炸受损的居民家中，站立在那望着远方回不去的家；也许前方只是它的一段“航线”，而它却飞不过这片黑烟。</p>
+	<p id="p2">在当时核心区危险品储量不明的情况下，对于消防员官兵来说，理应停止一切作业，暂时撤离到外围。而对于刚成功突进现场的我来说，感觉核心区比外围更“安全”，核心区内已无警戒人员，也无人阻止干扰我去记录现场，但这也意味着危险，让我稍许感到些不安。对于新闻摄影师来说，我只相信所拍摄到的，也有一种使命感，就是让世界看得更清楚一些。对于突发事件来说，我们只能去突破现场，去记录赤裸裸的现实，这是硬道理，没有商量的余地。</p>
+	<p id="p3">text-indent:段落缩进,indent(缩排的意思);text-align:文字对齐
+		text-decoration:文本的装饰线underline(下划线)overline(上划线)letter-spacing:文字间隔</p>
+	<p id="p3">css 控制文字颜色</p>
+	<div id="div1">床前明月光</div>
+	<div id="div2">疑是地上霜</div>
+	<div id="div3">举头望明月</div>
+	<div id="div4">低头思故乡</div>
+	<div id="div5"></div>
+</body>
+</html>

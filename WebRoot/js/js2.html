@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js2.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+</head>
+
+<body>
+	<script type="text/javascript">
+		//with的使用
+		//不必重复写docment.write()
+		//with (document) {
+		//write("<ul>");
+		//write("<li>hello</li>");
+		//write("<li>world</li>");
+		//write("<ul>");
+		//}
+
+		//相当于java类的构造函数
+		function member(name, gender) {
+			this.name = name;
+			this.gender = gender;
+		}
+
+		//for....in语句:重复执行指定对象的所有属性
+		//格式：for(变量in对象){
+		//<语句组>
+		//}
+
+		function showProperty(obj, person) {
+			var str = "";
+			for ( var i in obj) {
+				str += person + "." + i + "=" + obj[i] + "<br>";
+			}
+			//i表示属性 obj[i]表示属性的值
+			return str;
+		}
+		var zhangSan = new member("张三", "男");//建立实例
+		document.writeln(showProperty(zhangSan, "person"));
+		//if....else ,for(),switch,break,continue 和JAVA类似
+		
+		
+	</script>
+</body>
+</html>

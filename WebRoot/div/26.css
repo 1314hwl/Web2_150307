@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+@IMPORT url("26_1.css");
+#div2{
+	width: 200px;
+	height: 200px;
+	background: olive;
+	margin-top: 20px;
+	
+}

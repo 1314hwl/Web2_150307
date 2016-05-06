@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jquery4.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<script type="text/javascript">
+	window.onload = function() {
+		var myTable = document.getElementById("table1");//获取table对象
+		var myTBody = myTable.getElementsByTagName("tbody")[0];//获取第一个tbody对象
+		var myTrs = myTBody.getElementsByTagName("tr");//获取所有的tr对象
+		for ( var i = 0; i < myTrs.length; i++) {
+			if (i % 2 == 0) {
+				myTrs[i].style.backgroundColor = "#ff00ff";
+			} else {
+
+				myTrs[i].style.backgroundColor = "#0fff0f";
+			}
+			//style="background-color"在js中使用css
+			//要写成myElement.style.backgroundColor而不能写成myElement.style.background-color
+		}
+
+	}
+</script>
+</head>
+
+<body>
+	<table id="table1" border="1" align="center" width="60%">
+		<tbody>
+			<tr>
+				<td>hello</td>
+				<td>hello</td>
+				<td>hello</td>
+				<td>hello</td>
+			</tr>
+			<tr>
+				<td>world</td>
+				<td>world</td>
+				<td>world</td>
+				<td>world</td>
+			</tr>
+			<tr>
+				<td>welcome</td>
+				<td>welcome</td>
+				<td>welcome</td>
+				<td>welcome</td>
+			</tr>
+			<tr>
+				<td>11111</td>
+				<td>11111</td>
+				<td>11111</td>
+				<td>11111</td>
+			</tr>
+			<tr>
+				<td>2222</td>
+				<td>2222</td>
+				<td>2222</td>
+				<td>2222</td>
+			</tr>
+			<tr>
+				<td>33333</td>
+				<td>33333</td>
+				<td>33333</td>
+				<td>33333</td>
+			</tr>
+			<tr>
+				<td>44444</td>
+				<td>44444</td>
+				<td>44444</td>
+				<td>44444</td>
+			</tr>
+			<tr>
+				<td>55555</td>
+				<td>55555</td>
+				<td>55555</td>
+				<td>55555</td>
+			</tr>
+			<tr>
+				<td>66666</td>
+				<td>66666</td>
+				<td>66666</td>
+				<td>66666</td>
+			</tr>
+			<tr>
+				<td>77777</td>
+				<td>77777</td>
+				<td>77777</td>
+				<td>77777</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

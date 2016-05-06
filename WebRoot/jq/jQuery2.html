@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery2.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<script type="text/javascript" src="jquery-1.11.2.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var pElement = document.getElementsByTagName("p")[0];
+		//将DOM对象转换成jQuery对象
+		var pElementJquery = $(pElement);
+		//alert("DOM对象的结果:" + pElement.innerHTML);
+		//alert("jQuery对象结果:" + pElementJquery.html());
+
+		var cm = $("#clickMe");//#表示的是元素的id,不加#是标签的名字
+		//Jquery对象转换成一个DOM对象
+		//1:
+		var dom1 = cm[0];//dom是DOM对象
+		alert(dom1.innerHTML);
+		//2:
+		var dom2=cm.get(0);
+		alert(dom2.innerHTML);
+		
+
+	});
+</script>
+</head>
+<body>
+	<p id="clickMe">点击我</p>
+
+
+</body>
+</html>

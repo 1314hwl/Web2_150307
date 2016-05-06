@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jquery6.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<script type="text/javascript" src="jquery-1.11.2.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		/**
+		 * 基本选择器：1.#id:根据给定的id匹配一个元素,返回单个的元素：eg:$("#test")选取id为test的元素
+		 **/
+		//alert($("#test1").text());//返回baidu
+		//alert($("#test1").length);//返回1:html中id的值不能重复
+		//alert($("#test1")[0].href);//返回http://www.baidu.com
+		//alert($("#test1").text());//返回baidu
+		//alert($("#test1").html());//返回<b>baidu</b>
+		//alert($("#test1")[0].innerHTML);//返回<b>baidu</b>
+		//alert($("#test1")[0].innerText);//返回baidu
+		/**
+		 * 2..class根据给定的类名匹配元素,返回集合元素eg: $(".test")选取所有class为test的元素
+		 * 注意:只要class属性存在即可,不管class对象是否存在
+		 **/
+         alert($(".myClass").length);//返回2：myClass对象实际不存在
+		/**
+		 * 3.element根据给定的元素名匹配元素,返回集合元素 eg:$("p")选取所有<p>的元素
+		 **/
+		/**
+		 * 4.*匹配所有元素,返回集合元素eg: $("*")选取所有元素
+		 **/
+		/**
+		 * 5.selector1,selector2....selectN将每一个选择器匹配到的元素合并后一起返回,返回集合元素 $("div,span,p,myClass")选取所有<div>,<span>和拥有class为myClass的<p>标签的一组元素
+		 **/
+	});
+</script>
+</head>
+
+<body>
+
+	<a id="test1" href="http://www.baidu.com"><b>baidu</b> </a>
+	<a id="test1" href="http://www.sina.com">sina</a>
+	<a class="myClass"></a>
+	<a class="myClass"></a>
+</body>
+</html>

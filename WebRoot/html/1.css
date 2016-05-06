@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+@IMPORT url("2.css");
+
+#right_1 {
+	width: 30px;
+	height: 500px;
+	background: blue;
+	float: left;
+}
+
+.footer_1 {
+	height: 190px;
+	border: 1px;
+	border-style: solid;
+	border-color: blue;
+	color: white;
+	padding: 5px;
+}
+
+.footer_2 {
+	height: 140px;
+	border: 1px;
+	margin-top: 2px;
+	border-style: solid;
+	border-color: blue;
+}
+
+.footer_3 {
+	margin-top: 2px;
+	border: 1px;
+	border-style: solid;
+	border-color: blue;
+}
+
+h2 {
+	text-align: center;
+}

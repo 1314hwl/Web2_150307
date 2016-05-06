@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jquery8.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="jquery-1.11.2.js"></script>
+
+<script type="text/javascript">
+	//层次选择器(level)
+
+	$(document).ready(function() {
+		/**
+		 *1.$("ancestor descendant"):选取ancestor元素里的所有descendant(后代)元素
+		 *return:结合元素
+		 *eg:$("div span")选取<div>里的所有的<span>元素
+		 **/
+		$("#button1").click(function() {
+			$("body div").css("background", "red");
+		});
+		/**
+		 *2.$("parent>child"):选取parent元素里下的元素,与$("ancestor descendant")有区别,$("ancestor descendant")选择的是后代
+		 *return:结合元素
+		 *eg:$("div>span")选取<div>元素下元素名为<span>的子元素
+		 **/
+		$("#button2").click(function() {
+			$("body > div").css("background", "blue");
+		});
+		/**
+		 *3.$("prev+next"):选取prev元素后的next元素
+		 *return:结合元素
+		 *eg:$(".one+div")选取class为one的下一个<div>元素
+		 **/
+		$("#button3").click(function() {
+			//$(".one + div").css("background", "orange");
+			$(".one").next("div").css("background", "orange");
+		});
+		/**
+		 *4.$("prev~ siblings"):选取prev元素之后的所有siblings元素
+		 *return:结合元素
+		 *eg:$("#two~div")选取id为two的元素后面的所有<div>兄弟元素
+		 **/
+		$("#button4").click(function() {
+			//$("#two ~ div").css("background", "green");
+			//$("#two").nextAll("div").css("background", "green");
+			$("#two").siblings("div").css("background", "green");
+		});
+	});
+</script>
+
+
+
+</head>
+<h3>层次选择器.</h3>
+<input type="button" value="btn1" id="button1">
+<input type="button" value="btn2" id="button2">
+<input type="button" value="btn3" id="button3">
+<input type="button" value="btn4" id="button4">
+<body>
+
+	<div class="one" id="one">
+		id 为 one,class 为one的div
+		<div class="mini">class 为mini</div>
+	</div>
+	<div class="one" id="two" title="test">
+		id=two,class=one,title=test的div
+		<div class="mini" title="other">class=mini,title=other的div</div>
+		<div class="mini" title="test">class=mini,title=test的div</div>
+	</div>
+
+	<div class="one">
+		<div class="mini">class=mini的div</div>
+		<div class="mini">class=mini的div</div>
+		<div class="mini">class=mini的div</div>
+		<div class="mini"></div>
+	</div>
+	<div class="one">
+		<div class="mini">class=mini的div</div>
+		<div class="mini">class=mini的div</div>
+		<div class="mini">class=mini的div</div>
+		<div class="mini" title="tesst">class=mini,title为tesst</div>
+	</div>
+
+	<div style="display:none;" class="none">style的display为"none"的div</div>
+	<div class="hide">class为hide的div</div>
+	<div>
+		包含input的type为hidden的div<input type="hidden" size="8"></input>
+	</div>
+</body>
+</html>

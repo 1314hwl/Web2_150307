@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jquery1.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript" src="jquery-1.11.2.js"></script>
+<script type="text/javascript">
+	//ready方法的作用是当页面中的dom加载完毕之后执行参数中的函数
+	//jQuery的口号是:write less,do more;
+	/**$(document).ready(function() {
+		alert("我是李大妈....哈哈!!!");
+
+	});
+	 **/
+
+	/**function test1() {
+		alert("Hello jQuery1!");
+
+	}
+	function test2() {
+		alert("Hello jQuery2!");
+
+	}
+	window.onload = test1();
+	window.onload = test2();
+	 **/
+
+	//给连接点击事件提示"Hello jQuery"
+	//1:
+	/**
+	window.onload = function() {
+		var mMyLinks = document.getElementsByTagName("a");
+		for ( var i = 0; i < mMyLinks.length; i++) {
+			mMyLinks[i].onclick = function() {
+				alert("Hello jQuery");
+			}
+		}
+	}
+	 **/
+	//2:
+	$(document).ready(function() {
+		$("a").click(function() {
+			alert("Hello jQuery");
+		});
+
+	});
+</script>
+</head>
+
+<body>
+
+	<a href="#">test1</a>
+	<br>
+	<a href="#">test2</a>
+	<br>
+	<a href="#">test3</a>
+	<br>
+	<a href="#">test4</a>
+	<br>
+
+
+
+</body>
+</html>

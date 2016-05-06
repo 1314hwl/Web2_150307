@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js4.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+</head>
+
+<body>
+	<script type="text/javascript">
+		//var nbaPerson = new Array("詹姆斯", "科比", "林書豪");
+		//var nbaPerson =["詹姆斯", "科比", "林書豪"];//推荐使用
+		var nbaPerson = new Array();
+		nbaPerson.push("詹姆斯");
+		nbaPerson.push("科比");
+		nbaPerson.push("林書豪1");
+		for ( var i = 0; i < nbaPerson.length; i++) {
+			document.writeln(nbaPerson[i] + "<br>");
+		}
+
+		with (document) {
+			write("<ul>");
+			write("<li>" + nbaPerson.join() + "</li>");
+			write("<li>" + nbaPerson.join(",") + "</li>");
+			write("<li>" + nbaPerson.toString() + "</li>");
+			write("<li>" + nbaPerson.reverse().join(";") + "</li>");
+			write("<li>" + nbaPerson.valueOf() + "</li>");
+			write("</ul>");
+		}
+
+		//二维数组
+
+		var nbaPerson2 = new Array(4);
+		nbaPerson2[0] = new Array("詹姆斯", 0);
+		nbaPerson2[1] = new Array("詹姆斯1", 1);
+		nbaPerson2[2] = new Array("詹姆斯2", 2);
+		nbaPerson2[3] = new Array("詹姆斯3", 3);
+		for ( var i = 0; i < nbaPerson2.length; i++) {
+			for ( var j = 0; j < nbaPerson2[i].length; j++) {
+				document.write("nbaPerson2[" + i + "][" + j + "]"
+						+ nbaPerson2[i][j] + "<br>");
+			}
+			document.write("<br>");
+		}
+
+		var testStr = "javaScriptTest";
+		var a = 123413;
+		with (document) {
+			write("转成大写:" + testStr.toLocaleUpperCase() + "   转成小写:"
+					+ testStr.toLocaleLowerCase(), "<br>");
+			write(a.toString().charAt(2), "<br>");
+			write(testStr.substring(2, 5), "<br>");
+			write(testStr.indexOf(searchString, startPosition), "<br>");
+		}
+
+		function isEmail() {
+			var emailValue = document.getElementsByName("email").toString()
+					.valueOf();
+			if (emailValue.indexof("@") == -1) {
+				alert("请填写正确的Email地址!")
+			} else {
+				alert("ok");
+			}
+		}
+	</script>
+
+
+
+
+</body>
+</html>
